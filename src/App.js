@@ -1,12 +1,13 @@
-
+import {ChakraProvider} from '@chakra-ui/react';
 import Header from './Header';
 
 
 function App() {
   return (
-    
-    <Header/>
-    
+    <ChakraProvider>
+      <Header/>
+    </ChakraProvider>
+
   );
 }
 

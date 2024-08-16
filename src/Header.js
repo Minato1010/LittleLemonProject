@@ -7,7 +7,7 @@ function Header(){
     return (
     
     <header>
-        <title>HOLA</title>
+        
         <Nav/>
         <Main/>
         <Footer/>
