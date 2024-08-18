@@ -1,23 +1,21 @@
-import { Box, Center, HStack } from "@chakra-ui/react";
 import logo from './icons_assets/Logo.svg';
+import './styles.css';
 function Nav(){
     return (
     <nav>
-        <Box backgroundColor="white" maxWidth="1440px" margin="15px">
-
         
-        <HStack spacing={8} textStyle={"bold"}>
-            
-        <a href=""> <img src={logo} alt="Logo" style={{ width: '200px', marginLeft: '150px', marginRight: '150px' }} /></a>
-        <a href="">HOME</a>
-        <a href="">ABOUT</a>
-        <a href="">MENU</a>
-        <a href="">RESERVATIONS</a>
-        <a href="">ORDER ONLINE</a>
-        <a href="">LOGIN</a>
         
-        </HStack>
-        </Box>       
+        <ul className='box'>
+        <li className='menu'><a href=""> <img src={logo} alt="Logo" style={{ width: '170px', paddingLeft:'20px' }} /></a></li>
+        <li className='menu'><a href="" >HOME</a></li>
+        <li className='menu'><a href="" >ABOUT</a></li>
+        <li className='menu'><a href="" >MENU</a></li>
+        <li className='menu'><a href="" >RESERVATIONS</a></li>
+        <li className='menu'><a href="" >ORDER ONLINE</a></li>
+        <li className='menu'><a href="" >LOGIN</a></li>
+        
+        </ul>
+        
         
     </nav>);
 }
