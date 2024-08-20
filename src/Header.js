@@ -1,17 +1,12 @@
-import Nav from './Nav';
-import Main from './Main';
-import Footer from './Footer';
+import Main from './HomePage';
 import './styles.css';
 
-function Header(){
+function Header() {
     return (
-    
-    <header>
         
-        <Nav/>
-        <Main/>
-        <Footer/>
-    </header>);
+            <Main />
+        
+    );
 }
 
 export default Header;

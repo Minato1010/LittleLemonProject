@@ -1,8 +1,11 @@
+import { Link } from 'react-router-dom';
+
+import { Link as LinkSection} from 'react-scroll';
 import img from './icons_assets/restaurant.jpg';
 function Footer(){
     return(
         <footer>
-            <section className='sec'>
+            <section>
                     <div className="box">
                         <div className="column">
                             <img src={img} style={{width:"230px", height:"320px"}}/>
@@ -12,11 +15,11 @@ function Footer(){
                                 <li>
                                     DOORMAT NAVIGATION
                                 </li><br/>
-                                <li><a href="">HOME</a>
+                                <li><Link to="/">HOME</Link>
                                     
                                 </li>
                                 <li>
-                                <a href="">ABOUT</a>
+                                <LinkSection to="about">ABOUT</LinkSection>
                                 </li>
                                 <li>
                                 <a href="">MENU</a>
