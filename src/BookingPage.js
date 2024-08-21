@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 
 
-function BookingPage() {
-    const [date, setDate] = useState('');
+function BookingPage({ date, setDate, availableTimes, updateTimes }) {
     const [time, setTime] = useState('');
     const [guests, setGuests] = useState(1);
     const [occasion, setOccasion] = useState('');
     const [error, setError] = useState('');
+
+    const handleDateChange = (e) => {
+        const newDate = e.target.value;
+        setDate(newDate);
+        updateTimes(newDate); // Actualizar los horarios disponibles
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -37,15 +42,14 @@ function BookingPage() {
              </div>          |
             <form style={{display: "grid", maxWidth: "200px", gap: "20px"}} onSubmit={handleSubmit}>
                 <label for="res-date">Choose a date</label>
-                <input type="date" value={date} id="res-date" className="input" onChange={(e)=>setDate(e.target.value)} required/>
+                <input type="date" value={date} id="res-date" className="input" onChange={handleDateChange} required/>
                 <label for="res-time">Choose time</label>
                 <select id="res-time" value={time} onChange={(e)=>setTime(e.target.value)} className="input">
-                    <option>17:00</option>
-                    <option>18:00</option>
-                    <option>19:00</option>
-                    <option>20:00</option>
-                    <option>21:00</option>
-                    <option>22:00</option>
+                {availableTimes.map((availableTime) => (
+                    <option key={availableTime} value={availableTime}>
+                        {availableTime}
+                    </option>
+                ))}
                 </select>
                 <label for="guests">Number of guests</label>
                 <input type="number" value={guests} onChange={(e)=>setGuests(e.target.value)} placeholder="1" min="1" max="10" id="guests" className="input" required/>
@@ -58,6 +62,7 @@ function BookingPage() {
 
 
             </form>
+
         </div>
 
 
