@@ -19,11 +19,11 @@ function Main() {
                         <h1 style={{ color: "#F4CE14" }}>Little Lemon</h1>
 
 
-                        <h3>Chicago</h3>
+                        <h3 >Chicago</h3>
 
-                        <p className='textblock' style={{ color: "white" }}>We are a family owned Mediterranean restaurant, focused on traditional
+                        <p className='textblock' style={{ color: "white"}} >We are a family owned Mediterranean restaurant, focused on traditional
                             recipes served with a modern twist.</p>
-                        <button className='button'>Reserve a table</button>
+                        <button className='button' aria-label='On Click'>Reserve a table</button>
                     </div>
                     <div className='column'>
                         <img src={chef} style={{ width: "350px", height: "450px", borderRadius: "30px" }} />
@@ -48,7 +48,7 @@ function Main() {
                         <h1 style={{color: "#F4CE14"}}>Little Lemon</h1>
                         <h3>Chicago</h3>
                         <br /><br />
-                        <p className='textblock'>Lorem iasp asopf asodpas daspdo ad iadpado asda dadas ddda sdasd asdas das dasdas dasdas das dasdas dasd dasdas das dasdas dasda dadas ddda sdasd asdas das dasdas dasdas das dasdas das </p>
+                        <p className='textblock' aria-label='On Click'>Lorem iasp asopf asodpas daspdo ad iadpado asda dadas ddda sdasd asdas das dasdas dasdas das dasdas dasd dasdas das dasdas dasda dadas ddda sdasd asdas das dasdas dasdas das dasdas das </p>
                     </div>
 
                     <img src={marioA} style={{ width: "350px", height: "450px", borderRadius: "30px" }} />
